@@ -8,13 +8,13 @@ configure:
 	cd $(BUILD_DIR) && cmake -G Xcode $(PROJECT_DIR)
 
 all: configure
-	cd $(BUILD_DIR) && cmake --build . --config Release
+	cd $(BUILD_DIR) && cmake --build . --config Debug
 
 clean:
 	rm -rf $(BUILD_DIR)
 
-run: $(BUILD_DIR)/Release/cocoa_stream
-	$(BUILD_DIR)/Release/cocoa_stream
+run: $(BUILD_DIR)/Debug/cocoa_stream
+	$(BUILD_DIR)/Debug/cocoa_stream
 
 .PHONY: default configure all clean run
 
